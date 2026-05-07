@@ -2,104 +2,159 @@
 <html>
 <head>
     <title>Nadejda | ML Portfolio</title>
+
     <style>
         body {
-            font-family: Arial;
             margin: 0;
+            font-family: 'Segoe UI', sans-serif;
             background: #f5f7fa;
+        }
+
+        /* NAVBAR */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #1f4e79;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1f4e79, #3a7bd5);
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 60px 20px;
             text-align: center;
         }
-        .header {
-            background: #1f4e79;
-            color: white;
-            padding: 40px;
-        }
-        .section {
-            padding: 40px;
-        }
+
+        /* CARDS */
         .card {
             background: white;
-            padding: 20px;
+            padding: 25px;
             margin: 20px auto;
             width: 60%;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
-        .card:hover {
-            transform: scale(1.03);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             transition: 0.3s;
         }
-        a.button {
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* BUTTON */
+        .button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: #1f4e79;
             color: white;
+            border-radius: 6px;
             text-decoration: none;
-            border-radius: 5px;
+            margin-top: 10px;
         }
-        a.button:hover {
+
+        .button:hover {
             background: #163a5f;
-            transition: 0.3s;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 80%;
+            margin: auto;
         }
     </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<div class="nav">
+    <div><strong>Nadejda</strong></div>
+    <div>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<!-- HEADER -->
 <div class="header">
     <h1>Nadejda Rak-Kanivetz</h1>
     <p>Machine Learning & AI Developer</p>
 </div>
 
 <!-- PROJECTS -->
-<div class="section">
+<div class="section" id="projects">
     <h2>🚀 Projects</h2>
 
-    <div class="card">
-        <h3>Image Processing Project</h3>
-        <p>Basic computer vision techniques using Python.</p>
-    </div>
+    <div class="grid">
 
-    <div class="card">
-        <h3>CNN Model</h3>
-        <p>Deep learning model built from scratch.</p>
-    </div>
+        <div class="card">
+            <h3>KNN AI Dashboard</h3>
+            <p>Interactive ML app with model comparison and visualization.</p>
+            <a class="button" href="https://ovyvpf3jzgj2gu3oxph7sj.streamlit.app/" target="_blank">View App</a>
+        </div>
 
-    <div class="card">
-        <h3>KNN AI Dashboard</h3>
-        <p>Interactive machine learning app with model comparison and visualization.</p>
+        <div class="card">
+            <h3>CNN Model</h3>
+            <p>Deep learning model built from scratch.</p>
+        </div>
 
-        <a class="button" href="https://ovyvpf3jzgj2gu3oxph7sj.streamlit.app/" target="_blank">
-            View Live App
-        </a>
+        <div class="card">
+            <h3>Image Processing</h3>
+            <p>Computer vision techniques using Python.</p>
+        </div>
+
     </div>
 </div>
 
 <!-- SKILLS -->
-<div class="section">
+<div class="section" id="skills">
     <h2>💼 Skills</h2>
     <p>Python • Machine Learning • Streamlit • Data Science • Scikit-learn</p>
 </div>
 
 <!-- CONTACT -->
-<div class="section">
+<div class="section" id="contact">
     <h2>📬 Contact</h2>
     <p>Email: nadejdarak@hotmail.com</p>
-</div>
 
-<!-- LINKS -->
-<div class="section">
-    <h2>🔗 Links</h2>
+    <br>
 
-    <a class="button" href="https://github.com/nadeslava" target="_blank">
-        GitHub
-    </a>
+    <a class="button" href="https://github.com/nadeslava" target="_blank">GitHub</a>
 
     <br><br>
 
-    <a class="button" href="resume.pdf" target="_blank">
-        Download Resume
-    </a>
+    <a class="button" href="resume.pdf" target="_blank">Download Resume</a>
 </div>
 
 </body>
